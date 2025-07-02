@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alibbit - Next-Gen AI Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            light: '#3b82f6',
+                            DEFAULT: '#2563eb',
+                            dark: '#1d4ed8',
+                        },
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: radial-gradient(circle at 30% 50%, rgba(37, 99, 235, 0.15) 0%, rgba(15, 23, 42, 1) 60%);
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.3);
+        }
+        .glow-text {
+            text-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-gray-200 min-h-screen font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="container mx-auto px-6 py-6 flex justify-between items-center">
+        <div class="text-2xl font-bold tracking-tighter">
+            <span class="text-primary-light">Alibbit</span>
+        </div>
+        <div class="hidden md:flex space-x-10">
+            <a href="#features" class="hover:text-primary-light transition">Features</a>
+            <a href="#technology" class="hover:text-primary-light transition">Technology</a>
+            <a href="#integrations" class="hover:text-primary-light transition">Integrations</a>
+        </div>
+        <button class="md:hidden text-xl">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20 md:py-32 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-16 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    The <span class="text-primary-light glow-text">Universal</span><br>
+                    AI Platform
+                </h1>
+                <p class="text-xl text-gray-400 mb-10 max-w-lg">
+                    Alibbit redefines AI interaction, combining local deployment with cloud intelligence in one seamless experience. Harness the full spectrum of AI capabilities without compromise.
+                </p>
+                <a href="https://github.com/catcouble/Ali/releases" class="bg-primary-light hover:bg-primary-dark text-white px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-light/20">
+                    Download Now
+                </a>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-full max-w-xl">
+                    <div class="absolute -inset-4 bg-primary-dark/30 rounded-3xl blur-xl"></div>
+                    <img src="https://huggingface.co/datasets/theflowercat/more/resolve/main/alice.jpg" alt="Alibbit Platform" class="relative rounded-2xl border border-gray-800 shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-6 bg-dark-800">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                <span class="text-primary-light">Powerful</span> Features
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card p-8 rounded-xl border border-gray-800">
+                    <div class="text-primary-light text-4xl mb-6">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Local AI Deployment</h3>
+                    <p class="text-gray-400">
+                        Run Ollama and other models locally with unprecedented efficiency. Maintain complete control over your AI infrastructure.
+                    </p>
+                </div>
+                <div class="feature-card p-8 rounded-xl border border-gray-800">
+                    <div class="text-primary-light text-4xl mb-6">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Multi-Cloud Integration</h3>
+                    <p class="text-gray-400">
+                        Seamlessly connect with OpenAI, Gemini, Claude, and DeepSeek. Switch between providers with a single click.
+                    </p>
+                </div>
+                <div class="feature-card p-8 rounded-xl border border-gray-800">
+                    <div class="text-primary-light text-4xl mb-6">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">MCP Tool Integration</h3>
+                    <p class="text-gray-400">
+                        Advanced tooling for sophisticated AI interactions. Create complex workflows that leverage multiple models simultaneously.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="py-20 px-6 bg-dark-900">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <img src="https://placehold.co/600x400/1e293b/2563eb/png?text=Local+Data+Storage" alt="Local Data Storage" class="rounded-2xl border border-gray-800 shadow-xl">
+                </div>
+                <div class="md:w-1/2 md:pl-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8">
+                        <span class="text-primary-light">Privacy-First</span> Technology
+                    </h2>
+                    <p class="text-gray-400 mb-6 text-lg">
+                        Alibbit puts your privacy first. All your data, conversations, and AI interactions are stored locally on your device - never on our servers. Enjoy complete control over your information.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="text-primary-light mt-1 mr-4">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <span class="text-gray-300">End-to-end encrypted local storage</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="text-primary-light mt-1 mr-4">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <span class="text-gray-300">No data leaves your device without permission</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="text-primary-light mt-1 mr-4">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span class="text-gray-300">Full control over data retention and deletion</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrations Section -->
+    <section id="integrations" class="py-20 px-6 bg-dark-800">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                <span class="text-primary-light">Universal</span> Compatibility
+            </h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="bg-dark-700 p-6 rounded-xl border border-gray-800 flex items-center justify-center w-40 h-32">
+                    <div class="text-center">
+                        <!-- <i class="fab fa-google text-4xl mb-2 text-blue-400"></i>
+                        <span class="font-medium">Gemini</span> -->
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Google_Favicon_2025.svg" alt="Gemini" class="w-10 h-10 mb-2 mx-auto">
+                        <span class="font-medium">OpenAI</span>
+                    </div>
+                </div>
+                <div class="bg-dark-700 p-6 rounded-xl border border-gray-800 flex items-center justify-center w-40 h-32">
+                    <div class="text-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/OpenAI_logo_2025_%28symbol%29.svg/640px-OpenAI_logo_2025_%28symbol%29.svg.png" alt="OpenAI" class="w-10 h-10 mb-2 mx-auto">
+                        <span class="font-medium">OpenAI</span>
+                    </div>
+                </div>
+                <div class="bg-dark-700 p-6 rounded-xl border border-gray-800 flex items-center justify-center w-40 h-32">
+                    <div class="text-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Claude_AI_symbol.svg/640px-Claude_AI_symbol.svg.png" alt="Claude" class="w-10 h-10 mb-2 mx-auto">
+                        <span class="font-medium">Claude</span>
+                    </div>
+                </div>
+                <div class="bg-dark-700 p-6 rounded-xl border border-gray-800 flex items-center justify-center w-40 h-32">
+                    <div class="text-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/DeepSeek-icon.svg/640px-DeepSeek-icon.svg.png" alt="DeepSeek" class="w-10 h-10 mb-2 mx-auto">
+                        <span class="font-medium">DeepSeek</span>
+                    </div>
+                </div>
+                <div class="bg-dark-700 p-6 rounded-xl border border-gray-800 flex items-center justify-center w-40 h-32">
+                    <div class="text-center">
+                        <img src="https://ollama.com/public/ollama.png" alt="Ollama" class="w-10 h-10 mb-2 mx-auto">
+                        <span class="font-medium">Ollama</span>
+                    </div>
+                </div>
+                <div class="bg-dark-700 p-6 rounded-xl border border-gray-800 flex items-center justify-center w-40 h-32 hover:bg-dark-600 transition cursor-pointer">
+                    <div class="text-center">
+                        <i class="fas fa-plus text-4xl mb-2 text-gray-400"></i>
+                        <span class="font-medium text-gray-400">More</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="download" class="py-20 px-6 bg-dark-900">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">
+                Ready to Transform Your <span class="text-primary-light">AI Experience</span>?
+            </h2>
+            <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+                Download Alibbit today and unlock the full potential of modern AI in a single, elegant platform.
+            </p>
+            <a href="https://github.com/catcouble/Ali/releases/download/v1.1.0/Alibbit_mac.dmg.zip" class="bg-primary-light hover:bg-primary-dark text-white px-10 py-5 rounded-full text-lg font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-light/20 inline-block">
+                Download Now
+                <i class="fas fa-arrow-down ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-800 py-12 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-xl font-bold mb-6 md:mb-0">
+                    <span class="text-primary-light">Alibbit</span>
+                </div>
+                <!-- <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#" class="text-gray-400 hover:text-primary-light transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary-light transition">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary-light transition">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </div> -->
+                <div class="text-gray-500 text-sm">
+                    &copy; 2025 Alibbit. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
